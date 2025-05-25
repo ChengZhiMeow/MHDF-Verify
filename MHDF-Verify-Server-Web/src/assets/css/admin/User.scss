@@ -1,0 +1,116 @@
+.main {
+  .bar {
+    display: flex;
+    width: 100%;
+    height: 32px;
+
+    .right {
+      position: fixed;
+      display: flex;
+      height: 32px;
+      right: 20px;
+    }
+  }
+
+  .data {
+    .tag {
+      margin-right: 5px;
+    }
+  }
+
+  .page {
+    position: fixed;
+    right: 20px;
+  }
+
+  .message-menu {
+    .input {
+      position: relative;
+      padding: 20px 10px 10px 10px;
+
+      input {
+        width: 97%;
+
+        border: 2px solid #cccccc;
+        border-radius: 6px;
+        padding: 10px;
+
+        transition: all 0.3s ease;
+      }
+
+      label {
+        position: absolute;
+        top: 55%;
+        left: 20px;
+        transform: translateY(-50%);
+
+        color: #cccccc;
+
+        transition: all 0.3s ease;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #55bbfb;
+        box-shadow: 0 10px 10px -10px rgba(85, 187, 251, 0.5);
+      }
+
+      input:focus + label,
+      input:not(:placeholder-shown) + label {
+        top: 0;
+        color: #55bbfb;
+
+        transform: translateY(-25%);
+      }
+
+      input:not(:focus):valid + label {
+        color: #cccccc;
+      }
+    }
+
+    .tag-input {
+      position: relative;
+      padding: 20px 10px 10px 10px;
+
+      .el-input-tag {
+        position: relative;
+        padding: 10px;
+        height: 40px;
+
+        border: 2px solid #cccccc;
+        box-shadow: none;
+        border-radius: 6px;
+
+        transition: all 0.3s ease;
+      }
+
+      label {
+        position: absolute;
+        top: 55%;
+        left: 20px;
+        transform: translateY(-50%);
+
+        color: #cccccc;
+
+        transition: all 0.3s ease;
+      }
+
+      .el-input-tag.is-focused {
+        border-color: #55bbfb;
+        box-shadow: 0 10px 10px -10px rgba(85, 187, 251, 0.5);
+      }
+
+      .el-input-tag.is-focused + label,
+      .el-input-tag:has(.el-tag) + label {
+        top: 0;
+        color: #55bbfb;
+
+        transform: translateY(-25%);
+      }
+
+      .el-input-tag:not(.is-focused) + label {
+        color: #cccccc;
+      }
+    }
+  }
+}

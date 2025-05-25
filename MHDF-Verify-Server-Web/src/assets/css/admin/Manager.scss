@@ -1,0 +1,112 @@
+body {
+  background: white;
+
+  .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .sidebar {
+      width: 250px;
+      border-right: 1.5px solid rgb(224, 224, 230);
+
+      .title {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1.5px solid rgb(224, 224, 230);
+
+        display: flex;
+
+        --color: rgb(114, 195, 255);
+
+        .icon {
+          padding-right: 5px;
+          color: var(--color);
+
+        }
+
+        .text {
+          font-family: MaokenAssortedSans, serif;
+          font-size: 24px;
+          font-weight: normal;
+          color: var(--color);
+        }
+      }
+
+      .menu {
+        border: none;
+
+        .button {
+          height: 40px;
+        }
+      }
+    }
+
+    .menu {
+      .header {
+        display: flex;
+        height: 60px;
+        border-bottom: 1.5px solid rgb(224, 224, 230);
+
+        .left {
+          display: flex;
+          flex-direction: column;
+          height: 60px;
+
+          .user {
+            height: 30px;
+
+            h3 {
+              font-size: 18px;
+            }
+          }
+
+          .hitokoto {
+            height: 30px;
+
+            h3 {
+              font-size: 14px;
+              color: #444444;
+            }
+          }
+        }
+
+        .right {
+          position: fixed;
+          display: flex;
+          height: 60px;
+          right: 20px;
+
+          .logout {
+            position: relative;
+            height: 32px;
+            top: 14px;
+
+            border: none;
+            background: none;
+            cursor: pointer;
+
+            transition-duration: 0.4s;
+
+            span {
+              position: relative;
+              bottom: 10px;
+              padding-left: 5px;
+              font-size: 16px;
+              white-space: pre;
+            }
+          }
+
+          .logout:hover {
+            color: #ff7575;
+          }
+        }
+      }
+
+      .main {
+
+      }
+    }
+  }
+}

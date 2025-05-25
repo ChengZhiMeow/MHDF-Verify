@@ -1,0 +1,57 @@
+.main {
+  .info {
+    width: 96%;
+    height: 160px;
+
+    border: rgb(100, 100, 100) solid 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 0 rgba(72, 72, 72, 0.4);
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    transition: all 0.2s ease;
+
+    padding: 15px;
+
+    .title {
+      display: flex;
+
+      h3 {
+        position: relative;
+        left: 2px;
+        top: 3px;
+        transition: all 0.2s ease;
+      }
+    }
+
+    .subtitle {
+      display: flex;
+      margin-top: 5px;
+      padding-left: 10px;
+
+      h4 {
+        color: #4f4f4f;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+
+  .info:hover {
+    color: rgb(64, 158, 255);
+    border-color: rgb(64, 158, 255);
+    box-shadow: 0 0 8px 0 rgba(64, 158, 255, 0.4);
+
+    .title {
+      h3 {
+        color: rgb(64, 158, 255);
+      }
+    }
+
+    .subtitle {
+      h4 {
+        color: rgb(136, 193, 252);
+      }
+    }
+  }
+}

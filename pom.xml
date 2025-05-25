@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.chengzhiya</groupId>
+    <artifactId>MHDF-Verify-parent</artifactId>
+    <version>${env.project.version}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <env.java.version>17</env.java.version>
+        <env.project.version>1.2.0</env.project.version>
+    </properties>
+
+    <name>MHDF-Verify</name>
+
+    <modules>
+        <module>Example</module>
+        <module>MHDF-Verify-Client</module>
+        <module>MHDF-Verify-Server</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>alimaven-public</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </repository>
+        <repository>
+            <id>maven-maven2</id>
+            <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>apache-maven2</id>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>alimaven</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

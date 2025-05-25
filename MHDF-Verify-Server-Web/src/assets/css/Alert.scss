@@ -1,0 +1,33 @@
+body {
+  .alerts {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    flex-direction: column;
+
+    display: flex;
+    min-width: 300px;
+    max-width: 400px;
+
+    overflow: hidden;
+
+    .alertTransition-enter-active,
+    .alertTransition-leave-active {
+      transition: all 0.5s ease;
+    }
+
+    .alertTransition-enter-from,
+    .alertTransition-leave-to {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    .el-alert:first-child {
+      margin-top: 0;
+    }
+
+    .el-alert {
+      margin-top: 10px;
+    }
+  }
+}

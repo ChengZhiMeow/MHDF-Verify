@@ -1,0 +1,53 @@
+body {
+  background: url("../images/NotFoundBackground.png");
+  background-size: cover;
+  backdrop-filter: blur(10px);
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    height: 75%;
+    min-height: 600px;
+    min-width: 400px;
+
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+
+    padding: 20px 20px 20px 20px;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 160px;
+        height: 160px;
+      }
+
+      h2 {
+        padding-top: 10px;
+        font-weight: 800;
+        font-size: 40px;
+        color: rgb(255, 118, 118);
+      }
+    }
+
+    .info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+
+      h4 {
+        font-size: 16px;
+        color: rgb(138, 138, 138);
+      }
+    }
+  }
+}
