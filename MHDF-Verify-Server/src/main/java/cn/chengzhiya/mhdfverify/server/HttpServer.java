@@ -6,6 +6,7 @@ import cn.chengzhiya.mhdfverify.controller.ServerController;
 import cn.chengzhiya.mhdfverify.entity.http.JsonHttpData;
 import cn.chengzhiya.mhdfverify.util.AnnotationUtil;
 import cn.chengzhiya.mhdfverify.util.StringUtil;
+import cn.chengzhiya.mhdfverify.util.config.ConfigUtil;
 import com.alibaba.fastjson2.JSONObject;
 
 import javax.servlet.ServletResponse;
@@ -211,25 +212,27 @@ public final class HttpServer extends HttpServlet {
             }
         }
 
-        if (type == RequestType.Type.GET) {
-            int i = uri.lastIndexOf(".");
-            if (i == -1) {
-                response.setContentType("text/html");
-                returnFileHttpData(response, new File("./dist/index.html"));
-                return;
-            }
+        if (ConfigUtil.getConfig().getBoolean("serverSettings.adminWeb.enable")) {
+            if (type == RequestType.Type.GET) {
+                int i = uri.lastIndexOf(".");
+                if (i == -1) {
+                    response.setContentType("text/html");
+                    returnFileHttpData(response, new File("./dist/index.html"));
+                    return;
+                }
 
-            String suffix = uri.substring(i + 1);
-            String finalSuffix = switch (suffix) {
-                case "js" -> "javascript";
-                default -> suffix;
-            };
+                String suffix = uri.substring(i + 1);
+                String finalSuffix = switch (suffix) {
+                    case "js" -> "javascript";
+                    default -> suffix;
+                };
 
-            response.setContentType("text/" + finalSuffix);
-            try {
-                returnFileHttpData(response, new File("./dist/" + uri));
-                return;
-            } catch (Exception ignored) {
+                response.setContentType("text/" + finalSuffix);
+                try {
+                    returnFileHttpData(response, new File("./dist/" + uri));
+                    return;
+                } catch (Exception ignored) {
+                }
             }
         }
 

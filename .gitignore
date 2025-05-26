@@ -9,6 +9,7 @@ cmake-build-debug/
 
 config.yml
 *.db
+*.zip
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

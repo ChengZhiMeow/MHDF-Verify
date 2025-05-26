@@ -30,7 +30,8 @@ const createPlugin = async () => {
   try {
     let response = await axios.post(serverHost + "/api/plugin/create", {
       plugin: createData.name,
-      version: createData.version
+      version: createData.version,
+      client: createData.client
     }, {
       withCredentials: true
     });

@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
     public static Main instance;
+    private MHDFVerify mhdfVerify;
 
     @Override
     public void onEnable() {
@@ -22,7 +23,7 @@ public final class Main extends JavaPlugin {
             return;
         }
 
-        MHDFVerify mhdfVerify = new MHDFVerify(
+        mhdfVerify = new MHDFVerify(
                 this,
                 "127.0.0.1:8888",
                 config.getString("user"),
@@ -41,6 +42,9 @@ public final class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        mhdfVerify.close();
+
+        mhdfVerify = null;
         instance = null;
     }
 }

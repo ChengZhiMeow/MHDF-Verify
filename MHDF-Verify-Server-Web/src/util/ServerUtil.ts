@@ -2,7 +2,7 @@ import axios from "axios";
 
 import {addAlert} from "./AlertUtil.ts";
 
-export const serverHost: string = "http://127.0.0.1:8888";
+export const serverHost: string = window.location.origin;
 export let version = "1.0.0";
 export let startLong = -1;
 export let pluginCount = -1;

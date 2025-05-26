@@ -65,6 +65,7 @@ public final class PluginController {
     public static void create(HttpServletRequest request, HttpServletResponse response,
                               @BodyData("plugin") String plugin,
                               @BodyData("version") String version,
+                              @BodyData("client") Integer client,
                               @CookieData("token") String token
     ) {
         if (!JwtUtil.checkLogin("MHDFVerify-WebManager-Jwt", request.getRemoteHost(), token)) {
@@ -80,6 +81,7 @@ public final class PluginController {
         PluginData pluginData = new PluginData();
         pluginData.setPlugin(plugin);
         pluginData.setVersion(version);
+        pluginData.setClient(client);
         PluginDataUtil.updatePluginData(pluginData);
 
         HttpServer.returnJsonHttpData(response, new JsonHttpData("创建成功"));

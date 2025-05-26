@@ -3,13 +3,10 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>cn.chengzhiya</groupId>
-        <artifactId>MHDF-Verify-parent</artifactId>
-        <version>${env.project.version}</version>
-    </parent>
 
+    <groupId>cn.chengzhiya</groupId>
     <artifactId>MHDF-Verify-Client</artifactId>
+    <version>1.2.2</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -24,8 +21,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.14.0</version>
                 <configuration>
-                    <source>${env.java.version}</source>
-                    <target>${env.java.version}</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
         </plugins>

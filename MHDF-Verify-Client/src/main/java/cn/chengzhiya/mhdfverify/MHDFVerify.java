@@ -22,6 +22,8 @@ public final class MHDFVerify {
     private final String user;
     private final String password;
 
+    private WebSocketClient client;
+
     public MHDFVerify(JavaPlugin plugin, String host, String user, String password) {
         instance = this;
         this.plugin = plugin;
@@ -54,11 +56,20 @@ public final class MHDFVerify {
         }
 
         new Thread(() -> {
-            WebSocketClient client = new WebsocketClient(getHost(), token);
+            client = new WebsocketClient(getHost(), token);
             client.connect();
         }).start();
 
         return true;
+    }
+
+    /**
+     * 关闭验证
+     */
+    public void close() {
+        if (client != null) {
+            client.close();
+        }
     }
 
     /**

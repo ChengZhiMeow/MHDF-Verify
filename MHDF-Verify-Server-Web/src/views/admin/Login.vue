@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import {onMounted, ref} from "vue";
 import axios from "axios";
+import sha256 from "crypto-js/sha256";
 
 import "../../assets/css/admin/Login.scss";
 import {addAlert} from "../../util/AlertUtil.ts";
-import {sha256} from "../../util/Sha256Util.ts";
 import {serverHost} from "../../util/ServerUtil.ts";
 
 const userInput = ref<HTMLInputElement>();
@@ -26,7 +26,7 @@ const login = async () => {
 
   try {
     let response = await axios.post(serverHost + "/api/admin/login", {
-      data: await sha256(user + "|" + password)
+      data: sha256(user + "|" + password).toString().toUpperCase()
     }, {
       withCredentials: true
     });

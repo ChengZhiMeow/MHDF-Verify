@@ -46,35 +46,10 @@
                                 <filter>
                                     <artifact>*:*</artifact>
                                     <excludes>
-                                        <exclude>META-INF/maven/</exclude>
-                                        <exclude>META-INF/native-image/</exclude>
-                                        <exclude>META-INF/org/</exclude>
-                                        <exclude>META-INF/proguard/</exclude>
-                                        <exclude>META-INF/scm/</exclude>
-                                        <exclude>META-INF/services/</exclude>
-                                        <exclude>META-INF/versions/</exclude>
-                                        <exclude>META-INF/DEPENDENCIES</exclude>
-                                        <exclude>META-INF/eclipse.inf</exclude>
                                         <exclude>META-INF/ECLIPSE_.RSA</exclude>
                                         <exclude>META-INF/ECLIPSE_.SF</exclude>
-                                        <exclude>META-INF/LICENSE</exclude>
-                                        <exclude>META-INF/LICENSE.txt</exclude>
-                                        <exclude>META-INF/NOTICE</exclude>
-                                        <exclude>META-INF/web-fragment.xml</exclude>
 
                                         <exclude>schema/</exclude>
-
-                                        <exclude>about.html</exclude>
-                                        <exclude>ecj.1</exclude>
-                                        <exclude>INFO_BIN</exclude>
-                                        <exclude>INFO_SRC</exclude>
-                                        <exclude>LICENSE</exclude>
-                                        <exclude>Log4j-charsets.properties</exclude>
-                                        <exclude>Log4j-config.xsd</exclude>
-                                        <exclude>Log4j-events.dtd</exclude>
-                                        <exclude>Log4j-events.xsd</exclude>
-                                        <exclude>Log4j-levels.xsd</exclude>
-                                        <exclude>README</exclude>
                                     </excludes>
                                 </filter>
                             </filters>
