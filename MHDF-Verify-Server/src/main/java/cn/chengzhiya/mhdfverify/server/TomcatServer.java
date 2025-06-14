@@ -22,8 +22,7 @@ import java.util.logging.Logger;
 @Getter
 public final class TomcatServer {
     private Tomcat server;
-    @Getter
-    private HashMap<String, Class<?>> controllerHashMap = new HashMap<>();
+    private final HashMap<String, Class<?>> controllerHashMap = new HashMap<>();
 
     public TomcatServer() {
         try {
